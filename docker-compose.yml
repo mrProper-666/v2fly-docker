@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  v2ray:
+    build: .
+    restart: always
+    container_name: v2fly-core
+    network_mode: host
+    volumes:
+      - ./config.json:/etc/v2ray/config.json
